@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Diário de Bordo do Professor</title>
+<style>
+:root{--bg:#F5F7FA;--cd:#fff;--tx:#1B2430;--mu:#5B6776;--ac:#2557A7;--ak:#fff;--bd:#DDE3EA;--wn:#B3361F;--ok:#177A4F;--sf:#E9EEF6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12161C;--cd:#1B222B;--tx:#E8EDF3;--mu:#9AA7B6;--ac:#7FAEF0;--ak:#0E1520;--bd:#2D3846;--wn:#FF8F7A;--ok:#5FD3A0;--sf:#222B37}}
+:root[data-theme="dark"]{--bg:#12161C;--cd:#1B222B;--tx:#E8EDF3;--mu:#9AA7B6;--ac:#7FAEF0;--ak:#0E1520;--bd:#2D3846;--wn:#FF8F7A;--ok:#5FD3A0;--sf:#222B37}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--cd);z-index:10}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--cd);border-bottom:1px solid var(--bd);z-index:11}
+.in{max-width:760px;margin:0 auto;padding:0 16px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:12px 0 6px}
+h1{font-size:20px;margin:0}small{color:var(--mu);display:block}#dt::first-letter{text-transform:uppercase}
+nav{display:flex;gap:4px;overflow-x:auto;padding-bottom:8px}
+nav button{flex:none;border:0;background:none;color:var(--mu);font:inherit;font-weight:600;padding:8px 12px;border-radius:8px;cursor:pointer}
+nav button.on{background:var(--sf);color:var(--ac)}
+main{padding:16px 16px 110px;max-width:760px;margin:0 auto}
+h2{font-size:18px;margin:8px 0 12px}h3{font-size:16px;margin:6px 0}
+.cd{background:var(--cd);border:1px solid var(--bd);border-radius:12px;padding:14px;margin-bottom:12px}
+.hd{display:flex;align-items:center;gap:8px;font-size:14px}.dt{margin-left:auto;color:var(--mu)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--c);flex:none}
+p{margin:6px 0;white-space:pre-wrap;overflow-wrap:anywhere}.mu{color:var(--mu);font-size:14px}
+.tg{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:99px;background:var(--sf);color:var(--mu);margin-right:6px}
+.tg.ok{color:var(--ok)}.tg.wn{color:var(--wn)}
+.ac{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+button.sm{border:1px solid var(--bd);background:none;color:var(--tx);font:inherit;font-size:14px;padding:6px 12px;border-radius:8px;cursor:pointer}
+button.sm.pr{background:var(--ac);color:var(--ak);border-color:var(--ac)}button.sm.dg{color:var(--wn)}
+.bt{border:0;background:var(--ac);color:var(--ak);font:inherit;font-weight:600;padding:11px 18px;border-radius:10px;cursor:pointer}
+.bt.g{background:var(--sf);color:var(--tx)}.bt.w{background:var(--wn);color:var(--ak)}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));box-shadow:0 4px 14px #0004;border-radius:99px;padding:13px 20px;z-index:12}
+.gr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:16px}
+.st{background:var(--cd);border:1px solid var(--bd);border-radius:12px;padding:12px}.st b{font-size:28px;display:block;color:var(--ac)}
+.q{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.ch{display:flex;gap:6px;overflow-x:auto;margin-bottom:14px;padding-bottom:4px}
+.ch button{flex:none;display:flex;align-items:center;gap:6px;border:1px solid var(--bd);background:var(--cd);color:var(--tx);font:inherit;font-size:14px;padding:6px 12px;border-radius:99px;cursor:pointer}
+.ch button.on{background:var(--ac);color:var(--ak);border-color:var(--ac)}.ch i{width:9px;height:9px;border-radius:50%;background:var(--c)}
+.emp{text-align:center;padding:36px 16px;color:var(--mu)}.emp .bt{margin-top:8px}
+dialog{border:1px solid var(--bd);border-radius:14px;background:var(--cd);color:var(--tx);width:min(92vw,480px);padding:18px}
+dialog::backdrop{background:#0008}
+label{display:block;font-size:14px;font-weight:600;margin-top:12px}
+input,select,textarea{display:block;width:100%;margin-top:4px;font:inherit;font-size:16px;padding:10px;border:1px solid var(--bd);border-radius:8px;background:var(--bg);color:var(--tx)}
+.rw{display:flex;gap:8px;justify-content:flex-end;margin-top:18px}
+.sw{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}.s{width:32px;height:32px;border-radius:50%;border:3px solid transparent;cursor:pointer}.s.on{border-color:var(--tx)}
+</style></head><body>
+<header><div class="in"><div class="top"><div><h1>📒 Diário de Bordo</h1><small id="dt"></small></div><button class="sm" onclick="bk()">💾 Backup</button></div>
+<nav><button data-t="home" onclick="go('home')">Início</button><button data-t="aula" onclick="go('aula')">Diário</button><button data-t="plano" onclick="go('plano')">Planejar</button><button data-t="prova" onclick="go('prova')">Provas</button><button data-t="turmas" onclick="go('turmas')">Turmas</button></nav></div></header>
+<main id="v"></main>
+<button class="bt fab" id="fab" onclick="fabc()">+ Registrar aula</button>
+<dialog id="dg"></dialog>
+<script>
+const K='diario-bordo-v1';let S={classes:[],items:[]},tab='home',filt='',pc='';
+try{const r=localStorage.getItem(K);if(r)S=JSON.parse(r)}catch(e){}
+const save=()=>{try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}};
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const uid=()=>Math.random().toString(36).slice(2,9);
+const today=()=>{const d=new Date();return new Date(d-d.getTimezoneOffset()*6e4).toISOString().slice(0,10)};
+const fmt=d=>d?new Date(d+'T12:00').toLocaleDateString('pt-BR',{weekday:'short',day:'numeric',month:'short'}):'';
+const PAL=['#2F6FED','#E0572F','#1E9E6A','#B04FD0','#D9962B','#0E8FA6','#D2456F','#6B7A2A'];
+const KIND={aula:{s:'aula',t:'Assunto da aula',b:'O que foi trabalhado',e:'Tarefa de casa / observações',h:'Diário de aulas',fab:'+ Registrar aula'},
+plano:{s:'plano de aula',t:'Tema da aula',b:'Objetivos e atividades',e:'Materiais necessários',h:'Planejamento',fab:'+ Planejar aula'},
+prova:{s:'avaliação',t:'Título',b:'Conteúdo cobrado',e:'Valor / peso',h:'Provas e avaliações',fab:'+ Nova prova'}};
+const cls=id=>S.classes.find(c=>c.id===id);
+const items=(k,f)=>S.items.filter(i=>i.kind===k&&(!f||i.cls===f)).sort((a,b)=>k==='aula'?b.date.localeCompare(a.date):(+!!a.done-+!!b.done)||a.date.localeCompare(b.date));
+function go(t){tab=t;filt='';render();scrollTo(0,0)}
+function sf(c){filt=c;render()}
+function fabc(){tab==='turmas'?formC():form(tab==='home'?'aula':tab)}
+function render(){
+ $('#dt').textContent=new Date().toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long'});
+ $$('nav button').forEach(b=>b.classList.toggle('on',b.dataset.t===tab));
+ $('#fab').textContent=tab==='turmas'?'+ Nova turma':KIND[tab==='home'?'aula':tab].fab;
+ $('#fab').style.display=S.classes.length||tab==='turmas'?'':'none';
+ $('#v').innerHTML=tab==='home'?home():tab==='turmas'?turmas():lista(tab);
+}
+function card(i){
+ const c=cls(i.cls)||{name:'Turma removida',color:'#888'},k=KIND[i.kind],late=i.kind!=='aula'&&!i.done&&i.date<today();
+ let tg='';if(i.kind==='prova')tg+=`<span class="tg">${esc(i.type||'Prova')}</span>`;
+ if(i.kind==='prova'&&i.done)tg+='<span class="tg ok">Aplicada</span>';
+ if(late)tg+='<span class="tg wn">Atrasado</span>';
+ let b='';
+ if(i.kind==='plano')b=`<button class="sm pr" onclick="act('ok','${i.id}')">✓ Aula dada</button>`;
+ if(i.kind==='prova')b=`<button class="sm pr" onclick="act('ok','${i.id}')">${i.done?'Reabrir':'✓ Aplicada'}</button>`;
+ return `<div class="cd" style="--c:${c.color}"><div class="hd"><span class="dot"></span><b>${esc(c.name)}</b><span class="dt">${fmt(i.date)}</span></div>
+ <h3>${esc(i.title)}</h3>${tg}${i.body?`<p>${esc(i.body)}</p>`:''}${i.extra?`<p class="mu"><b>${k.e.split(' /')[0]}:</b> ${esc(i.extra)}</p>`:''}
+ <div class="ac">${b}<button class="sm" onclick="act('e','${i.id}')">Editar</button><button class="sm dg" onclick="act('d','${i.id}')">Excluir</button></div></div>`;
+}
+function home(){
+ if(!S.classes.length)return `<div class="emp"><h2>Bem-vinda ao seu Diário de Bordo 👋</h2><p>Comece cadastrando suas turmas. Depois é só registrar aulas, planejar as próximas e agendar provas.</p><button class="bt" onclick="formC()">+ Criar primeira turma</button></div>`;
+ const t=today(),m=t.slice(0,7);
+ const nA=S.items.filter(i=>i.kind==='aula'&&i.date.startsWith(m)).length;
+ const nP=S.items.filter(i=>i.kind==='plano'&&!i.done).length;
+ const nV=S.items.filter(i=>i.kind==='prova'&&!i.done&&i.date>=t).length;
+ const ag=S.items.filter(i=>i.kind!=='aula'&&!i.done).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,6);
+ const ul=items('aula').slice(0,3);
+ return `<div class="gr"><div class="st"><b>${S.classes.length}</b>turmas</div><div class="st"><b>${nA}</b>aulas no mês</div><div class="st"><b>${nP}</b>aulas planejadas</div><div class="st"><b>${nV}</b>provas a aplicar</div></div>
+ <div class="q"><button class="bt" onclick="form('aula')">+ Registrar aula</button><button class="bt g" onclick="form('plano')">+ Planejar</button><button class="bt g" onclick="form('prova')">+ Prova</button></div>
+ <h2>Agenda: próximos compromissos</h2>${ag.length?ag.map(card).join(''):'<p class="mu">Nada agendado. Planeje uma aula ou cadastre uma prova.</p>'}
+ <h2>Últimas aulas</h2>${ul.length?ul.map(card).join(''):'<p class="mu">Ainda não há aulas registradas.</p>'}`;
+}
+function lista(k){
+ const ch=`<div class="ch"><button class="${!filt?'on':''}" onclick="sf('')">Todas</button>${S.classes.map(c=>`<button class="${filt===c.id?'on':''}" style="--c:${c.color}" onclick="sf('${c.id}')"><i></i>${esc(c.name)}</button>`).join('')}</div>`;
+ if(!S.classes.length)return `<div class="emp"><p>Cadastre uma turma para começar.</p><button class="bt" onclick="formC()">+ Criar turma</button></div>`;
+ const l=items(k,filt);
+ return `<h2>${KIND[k].h}</h2>${ch}${l.length?l.map(card).join(''):`<div class="emp"><p>Nada por aqui ainda.</p><button class="bt" onclick="form('${k}')">${KIND[k].fab}</button></div>`}`;
+}
+function turmas(){
+ return `<h2>Minhas turmas</h2>${S.classes.length?S.classes.map(c=>{const n=k=>S.items.filter(i=>i.cls===c.id&&i.kind===k).length;
+ return `<div class="cd" style="--c:${c.color}"><div class="hd"><span class="dot"></span><b>${esc(c.name)}</b></div><p class="mu">${esc(c.subject)}</p><p class="mu">${n('aula')} aulas · ${n('plano')} planos · ${n('prova')} avaliações</p>
+ <div class="ac"><button class="sm" onclick="formC('${c.id}')">Editar</button><button class="sm dg" onclick="act('dc','${c.id}')">Excluir</button></div></div>`}).join(''):'<div class="emp"><p>Nenhuma turma ainda.</p><button class="bt" onclick="formC()">+ Criar turma</button></div>'}`;
+}
+function dg(h){$('#dg').innerHTML=h;if(!$('#dg').open)$('#dg').showModal()}
+function closeD(){if($('#dg').open)$('#dg').close()}
+function form(kind,id){
+ const it=id?S.items.find(x=>x.id===id):{kind,cls:filt||S.classes[0].id,date:today(),type:'Prova',title:'',body:'',extra:''},k=KIND[it.kind];
+ dg(`<h2>${id?'Editar':'Nova'} ${k.s}</h2>
+ <label>Turma<select id="f_c">${S.classes.map(c=>`<option value="${c.id}" ${c.id===it.cls?'selected':''}>${esc(c.name)} · ${esc(c.subject)}</option>`).join('')}</select></label>
+ <label>Data<input type="date" id="f_d" value="${it.date}"></label>
+ ${it.kind==='prova'?`<label>Tipo<select id="f_y">${['Prova','Trabalho','Seminário','Recuperação'].map(y=>`<option ${y===it.type?'selected':''}>${y}</option>`).join('')}</select></label>`:''}
+ <label>${k.t}<input id="f_t" value="${esc(it.title)}"></label>
+ <label>${k.b}<textarea id="f_b" rows="4">${esc(it.body)}</textarea></label>
+ <label>${k.e}<input id="f_e" value="${esc(it.extra)}"></label>
+ <div class="rw"><button class="bt g" onclick="closeD()">Cancelar</button><button class="bt" onclick="saveI('${it.kind}','${id||''}')">Salvar</button></div>`);
+}
+function saveI(kind,id){
+ const v=i=>$(i)?$(i).value.trim():'',t=v('#f_t');
+ if(!t){$('#f_t').focus();$('#f_t').style.borderColor='var(--wn)';return}
+ const d={cls:v('#f_c'),date:v('#f_d')||today(),title:t,body:v('#f_b'),extra:v('#f_e')};
+ if(kind==='prova')d.type=v('#f_y');
+ if(id)Object.assign(S.items.find(x=>x.id===id),d);else S.items.push({id:uid(),kind,done:false,...d});
+ save();closeD();render();
+}
+function formC(id){
+ const c=id?cls(id):{name:'',subject:'',color:PAL[S.classes.length%PAL.length]};pc=c.color;
+ dg(`<h2>${id?'Editar':'Nova'} turma</h2><label>Nome da turma<input id="c_n" value="${esc(c.name)}" placeholder="Ex.: 7º ano A"></label>
+ <label>Disciplina<input id="c_s" value="${esc(c.subject)}" placeholder="Ex.: Matemática"></label>
+ <label>Cor</label><div class="sw">${PAL.map(p=>`<button class="s ${p===pc?'on':''}" style="background:${p}" aria-label="cor" onclick="pick('${p}',this)"></button>`).join('')}</div>
+ <div class="rw"><button class="bt g" onclick="closeD()">Cancelar</button><button class="bt" onclick="saveC('${id||''}')">Salvar</button></div>`);
+}
+function pick(p,el){pc=p;$$('.sw .s').forEach(b=>b.classList.remove('on'));el.classList.add('on')}
+function saveC(id){
+ const n=$('#c_n').value.trim();if(!n){$('#c_n').focus();return}
+ const d={name:n,subject:$('#c_s').value.trim(),color:pc};
+ if(id)Object.assign(cls(id),d);else S.classes.push({id:uid(),...d});
+ save();closeD();render();
+}
+function ask(msg,fn){window._ok=fn;dg(`<h2>${msg}</h2><div class="rw"><button class="bt g" onclick="closeD()">Cancelar</button><button class="bt w" onclick="_ok();closeD()">Excluir</button></div>`)}
+function act(a,id){
+ const it=S.items.find(x=>x.id===id);
+ if(a==='e')form(it.kind,id);
+ if(a==='d')ask('Excluir este registro?',()=>{S.items=S.items.filter(x=>x.id!==id);save();render()});
+ if(a==='ok'){if(it.kind==='plano')it.kind='aula';else it.done=!it.done;it.date=it.kind==='aula'&&it.date>today()?today():it.date;save();render()}
+ if(a==='dc')ask('Excluir a turma e todos os seus registros?',()=>{S.classes=S.classes.filter(c=>c.id!==id);S.items=S.items.filter(x=>x.cls!==id);save();render()});
+}
+function bk(){
+ dg(`<h2>Backup dos dados</h2><p class="mu">Seus dados ficam salvos neste navegador e são privados: cada professora que abrir o link tem o seu próprio diário. Para trocar de aparelho, copie o código abaixo e cole no outro.</p>
+ <textarea id="bk" rows="6">${esc(JSON.stringify(S))}</textarea><p class="mu" id="bm"></p>
+ <div class="rw"><button class="bt g" onclick="closeD()">Fechar</button><button class="bt g" onclick="cp()">Copiar</button><button class="bt" onclick="imp()">Importar</button></div>`);
+}
+function cp(){const t=$('#bk');t.select();try{document.execCommand('copy');$('#bm').textContent='Código copiado.'}catch(e){$('#bm').textContent='Selecione e copie o texto manualmente.'}}
+function imp(){
+ try{const d=JSON.parse($('#bk').value);if(!Array.isArray(d.classes)||!Array.isArray(d.items))throw 0;S=d;save();closeD();render()}
+ catch(e){$('#bm').textContent='Código inválido. Cole o backup completo.'}
+}
+render();
+</script></body></html>
